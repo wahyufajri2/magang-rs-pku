@@ -39,6 +39,7 @@
             <a href="#" class="d-block"><?= $user['name']; ?></a>
           </div>
         </div>
+       
 
         <!-- SidebarSearch Form -->
         <div class="form-inline">
