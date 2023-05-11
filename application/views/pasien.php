@@ -60,11 +60,11 @@
         <thead>
           <tr class="text-center">
             <th>Id Pasien</th>
-            <th>No Mr</th>
+            <th>No Rm</th>
             <th>Nama Pasien</th>
             <th>Tanggal Lahir</th>
             <th>Action</th>
-            </tr>
+          </tr>
         </thead>
         <?php
         $no = 1;
@@ -73,12 +73,12 @@
           <tbody>
             <tr class="text-center">
               <td><?= $no++ ?></td>
-              <td><?php echo $psn['no_mr']; ?> </td>
+              <td><?php echo $psn['no_rm']; ?> </td>
               <td><?php echo $psn['nama_pasien']; ?> </td>
               <td><?php echo $psn['tgl_lahir']; ?> </td>
 
               <td>
-                <a href="" class="btn btn-success btn-sm"><i class="fa fa-heartbeat" aria-hidden="true"></i></a>             
+                <a href="" class="btn btn-success btn-sm"><i class="fa fa-heartbeat" aria-hidden="true"></i></a>
                 <button data-toggle="modal" data-target="#edit<?= $psn['id_pasien'] ?>" class="btn btn-warning btn-sm"><i class="fas fa-edit"></i></button>
                 <!-- <a href="<?= base_url('pasien/delete/' . $psn['id_pasien']) ?>" class="btn btn-danger btn-sm" onclick="return
                 confirm('Apakah anda yakin untuk menghapus Data ini?')"><i class="fas fa-trash"></i></a> -->
@@ -109,7 +109,7 @@
               <form action="<?= base_url('index.php/pasien/edit/' . $psn['id_pasien']) ?>" method="POST">
                 <div class="form-group">
                   <label for="Id Pasien">Id Pasien</label>
-                  <input type="text" name="id_pasien" class="form-control"value="<?= $psn['id_pasien'] ?>">
+                  <input type="text" name="id_pasien" class="form-control" value="<?= $psn['id_pasien'] ?>">
                   <?= form_error('id_pasien', '<div class="text-small text-danger">', '</div>'); ?>
                 </div>
                 <div class="form-group">
@@ -133,7 +133,7 @@
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
               <button type="submit" class="btn btn-primary btn-sm"><i class="fas fa-close"></i>Simpan</button>
-              
+
             </div>
           </div>
         </div>
