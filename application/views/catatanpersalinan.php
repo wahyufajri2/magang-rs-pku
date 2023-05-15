@@ -20,34 +20,40 @@
             </button>
           </div>
           <div class="modal-body">
-            <form action="<?= base_url('index.php/pasien/tambah_aksi') ?>" method="POST">
+            <form action="<?= base_url('index.php/catatanpersalinan/tambah_aksi') ?>" method="POST">
               <div class="form-group">
-                <label for="Id Pasien">Id Pasien </label>
-                <input type="text" name="id_pasien" class="form-control">
-                <?= form_error('id_pasien', '<div class="text-small text-danger">', '</div>'); ?>
+                <label for="no_antrian">No Antrian </label>
+                <input type="text" name="no_antrian" class="form-control">
+                <?= form_error('No_Antrian', '<div class="text-small text-danger">', '</div>'); ?>
               </div>
               <div class="form-group">
-                <label for="No. rm">No.Rekam Medis</label>
+                <label for="no_rm">No.Rekam Medis</label>
                 <input type="text" name="no_rm" class="form-control">
-                <?= form_error('no_rm', '<div class="text-small text-danger">', '</div>'); ?>
+                <?= form_error('No_RM', '<div class="text-small text-danger">', '</div>'); ?>
               </div>
 
               <div class="form-group">
-                <label for="Nama Pasien">Nama Pasien</label>
-                <input type="text" name="nama_pasien" class="form-control ">
-                <?= form_error('nama_pasien', '<div class="text-small text-danger">', '</div>'); ?>
+                <label for="status">Status</label>
+                <input type="text" name="status" class="form-control ">
+                <?= form_error('Nama_pasien', '<div class="text-small text-danger">', '</div>'); ?>
               </div>
 
               <div class="form-group">
-                <label for="tgl_lahir">Tanggal Lahir</label>
-                <input type="date" class="form-control" id="tanggal" name="tgl_lahir">
-                <?= form_error('tgl_lahir', '<div class="text-small text-danger">', '</div>'); ?>
+                <label for="periksa_tgl">Periksa Tanggal</label>
+                <input type="date" class="form-control" id="tanggal" name="periksa_tgl">
+                <?= form_error('Alamat', '<div class="text-small text-danger">', '</div>'); ?>
               </div>
 
               <div class="form-group">
-                <label for="alamat">Alamat</label>
-                <input type="text" name="alamat" class="form-control ">
-                <?= form_error('tgl_lahir', '<div class="text-small text-danger">', '</div>'); ?>
+                <label for="dokter_id">Dokter Id</label>
+                <input type="text" name="dokter_id" class="form-control ">
+                <?= form_error('Status', '<div class="text-small text-danger">', '</div>'); ?>
+              </div>
+
+              <div class="form-group">
+                <label for="data_created">Data Created</label>
+                <input type="text" name="data_created" class="form-control ">
+                <?= form_error('Aksi', '<div class="text-small text-danger">', '</div>'); ?>
               </div>
 
 
@@ -65,36 +71,39 @@
       <table id="example1" class="table table-bordered table-striped">
         <thead>
           <tr class="text-center">
-            <th>Id Pasien</th>
-            <th>Nama Pasien</th>
+            <th>No Antrian</th>
             <th>No RM</th>
-            <th>Tanggal Lahir</th>
-            <th>Alamat</th>
+            <th>status</th>
+            <th>periksa tgl</th>
+            <th>dokter id</th>
+            <th>data created</th>
             <th>Action</th>
             </tr>
         </thead>
         <?php
         $no = 1;
-        foreach ($pasien as $psn) { ?>
+        foreach ($catatanpersalinan as $cp) { ?>
 
           <tbody>
             <tr class="text-center">
               <td><?= $no++ ?></td>
-              <td><?php echo $psn['id_pasien']; ?> </td>
-              <td><?php echo $psn['nama_pasien']; ?> </td>
-              <td><?php echo $psn['no_rm']; ?> </td>
-              <td><?php echo $psn['tgl_lahir']; ?> </td>
-              <td><?php echo $psn['alamat']; ?> </td>
+              <td><?php echo $cp['no_antrian']; ?> </td>
+              <td><?php echo $cp['no_rm']; ?> </td>
+              <td><?php echo $cp['status']; ?> </td>
+              <td><?php echo $cp['periksa_tgl']; ?> </td>
+              <td><?php echo $cp['dokter_id']; ?> </td>
+              <!-- <td><?php echo $cp['data_created']; ?> </td> -->
+              
 
-              <td>
+              <!-- <td>
                 <a href="" class="btn btn-success btn-sm"><i class="fa fa-heartbeat" aria-hidden="true"></i></a>             
-                <button data-toggle="modal" data-target="#edit<?= $psn['id_pasien'] ?>" class="btn btn-warning btn-sm"><i class="fas fa-edit"></i></button>
-                <!-- <a href="<?= base_url('pasien/delete/' . $psn['id_pasien']) ?>" class="btn btn-danger btn-sm" onclick="return
-                confirm('Apakah anda yakin untuk menghapus Data ini?')"><i class="fas fa-trash"></i></a> -->
-                <a href="<?= base_url('index.php/pasien/delete/' . $psn['id_pasien']) ?>" class="btn btn-danger btn-sm" onclick="return confirm('Apakah anda yakin untuk menghapus Data ini?')"><i class="fas fa-trash"></i></a>
+                <button data-toggle="modal" data-target="#edit<?= $cp['no_rm'] ?>" class="btn btn-warning btn-sm"><i class="fas fa-edit"></i></button>
+                <a href="<?= base_url('pasien/delete/' . $cp['no_rm']) ?>" class="btn btn-danger btn-sm" onclick="return
+                confirm('Apakah anda yakin untuk menghapus Data ini?')"><i class="fas fa-trash"></i></a>
+                <a href="<?= base_url('index.php/pasien/delete/' . $cp['no_rm']) ?>" class="btn btn-danger btn-sm" onclick="return confirm('Apakah anda yakin untuk menghapus Data ini?')"><i class="fas fa-trash"></i></a>
 
-                <!-- <button data-toggle="modal" data-target="#exampleModal" class="btn btn-warning btn-sm"><i class="fas fa-edit"></i></button> -->
-              </td>
+                <button data-toggle="modal" data-target="#exampleModal" class="btn btn-warning btn-sm"><i class="fas fa-edit"></i></button>
+              </td> -->
 
             </tr>
             <tr>
@@ -102,10 +111,11 @@
             <?php } ?>
       </table>
     </div>
+    </div>
 
-    <!-- Modal Edit-->
-    <?php foreach ($pasien as $psn) { ?>
-      <div class="modal fade" id="edit<?= $psn['id_pasien'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <!-- Modal Edit
+    <?php foreach ($catatanpersalinan as $cp) ?> 
+      <div class="modal fade" id="edit<?= $cp['id_pasien'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
@@ -115,16 +125,16 @@
               </button>
             </div>
             <div class="modal-body">
-              <form action="<?= base_url('index.php/pasien/edit/' . $psn['id_pasien']) ?>" method="POST">
+              <form action="<?= base_url('index.php/pasien/edit/' . $cp['id_pasien']) ?>" method="POST">
                 <div class="form-group">
                   <label for="Id Pasien">Id Pasien</label>
-                  <input type="text" name="id_pasien" class="form-control"value="<?= $psn['id_pasien'] ?>">
+                  <input type="text" name="id_pasien" class="form-control"value="<?= $cp['id_pasien'] ?>">
                   <?= form_error('id_pasien', '<div class="text-small text-danger">', '</div>'); ?>
                 </div>
                 <div class="form-group">
-                  <label for="No. rm">No.Rekam Medis</label>
-                  <input type="text" name="no_rm" class="form-control" value="<?= $psn['no_rm'] ?>">
-                  <?= form_error('no_rm', '<div class="text-small text-danger">', '</div>'); ?>
+                  <label for="No. MR">No.Rekam Medis</label>
+                  <input type="text" name="no_mr" class="form-control" value="<?= $psn['no_mr'] ?>">
+                  <?= form_error('no_mr', '<div class="text-small text-danger">', '</div>'); ?>
                 </div>
 
                 <div class="form-group">
@@ -148,4 +158,4 @@
         </div>
       </div>
   </div>
-<?php } ?>
+<?php  ?> -->

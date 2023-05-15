@@ -1,14 +1,14 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Pasien extends CI_Controller
+class catatanpersalinan extends CI_Controller
 {
 
 
 	public function __construct() //fungsi yg dijalakan dicontroiler
 	{
 		parent::__construct();
-		$this->load->model('pasien_model');
+		$this->load->model('catatanpersalinan_model');
 		$this->load->database();
 
 
@@ -17,12 +17,12 @@ class Pasien extends CI_Controller
 
 	public function index()
 	{
-		$data['title'] = 'Pasien';
-		$data['pasien'] = $this->pasien_model->get_data();
+		$data['title'] = 'catatanpersalinan';
+		$data['catatanpersalinan'] = $this->catatanpersalinan_model->get_data();
 
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/sidebar', $data);
-		$this->load->view('pasien', $data);
+		$this->load->view('catatanpersalinan', $data);
 		$this->load->view('templates/footer');
 	}
 
@@ -44,13 +44,15 @@ class Pasien extends CI_Controller
 			$this->tambah();
 		} else { //jika benar kriteria rules maka lanjut */
 			$data = array(
-				'id_pasien' => $id_pasien,
+				'no_antrian' => $no_antrian,
 				'no_rm' => $this->input->post('no_rm'),
-				'nama_pasien' => $this->input->post('nama_pasien'),
-				'tgl_lahir' => $this->input->post('tgl_lahir'),
+				'status' => $this->input->post('status'),
+				'periksa_tgl' => $this->input->post('periksa_tgl'),
+				'dokter_id' => $this->input->post('dokter_id'),
+				'date_created' => $this->input->post('data_created'),
 			);
 		//}
-		$this->pasien_model->insert_data($data, 'tb_pasien');
+		$this->catatanpersalinan_model->insert_data($data, 'tb_kunjungan');
 		
 		redirect('index.php/pasien');
 	}
@@ -65,11 +67,11 @@ class Pasien extends CI_Controller
 		// }else{
 			$data = array(
 				'id_pasien' => $id_pasien,
-				'no_rm' => $this->input->post('no_rm'),
+				'no_mr' => $this->input->post('no_mr'),
 				'nama_pasien' => $this->input->post('nama_pasien'),
 				'tgl_lahir' => $this->input->post('tgl_lahir'),
 			);
-			$this -> pasien_model->update_data($data, 'tb_pasien');
+			$this -> catatanpersalinan_model->update_data($data, 'tb_pasien');
 			redirect('index.php/pasien');
 		}
 		
@@ -92,7 +94,7 @@ public function delete($id)
 {
 	$where = array('id_pasien' => $id);
 
-	$this -> pasien_model->delete($where, 'tb_pasien');
+	$this -> catatanpersalinan_model->delete($where, 'tb_pasien');
 			redirect('index.php/pasien');
 }
 }
