@@ -37,10 +37,10 @@
         <!-- Sidebar user panel (optional) -->
         <div class="user-panel mt-3 pb-3 mb-3 d-flex">
           <div class="image">
-            <img src="<?= base_url('asset/img/profile/') . $user['image']; ?>" class="img-circle elevation-2" alt="User Image">
+            <!-- <img src="<?= base_url('asset/img/profile/') . $user['image']; ?>" class="img-circle elevation-2" alt="User Image"> -->
           </div>
           <div class="info">
-            <a href="#" class="d-block"><?= $user['name']; ?></a>
+            <!-- <a href="#" class="d-block"><?= $user['name']; ?></a> -->
           </div>
         </div>
        
@@ -70,6 +70,18 @@
             <li class="nav-item d-none d-sm-inline-block">
               <a href="index3.html" class="nav-link">Home</a>
             </li>
+
+            <!-- <li class="nav-item">
+              <a href="<?= base_url('index.php/kunjungan') ?>" class="nav-link">
+                <i class="fas fa-fw nav-icon fa-user-md"></i>
+                <p>Kunjungan</p>
+              </a>
+            </li> -->
+            <li class="nav-item">
+              <a href="<?= base_url('index.php/catatanpersalinan') ?>" class="nav-link">
+                <i class="fas nav-icon fa-fw fa-crutch"></i>
+                <p>Catatan Persalinan</p>
+
             <li class="nav-item d-none d-sm-inline-block">
               <a href="#" class="nav-link">Contact</a>
             </li>
@@ -116,6 +128,7 @@
                 <i class="fas fa-bell fa-fw"></i>
                 <!-- Counter - Alerts -->
                 <span class="badge badge-danger badge-counter">3+</span>
+
               </a>
               <!-- Dropdown - Alerts -->
               <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="alertsDropdown">
@@ -161,6 +174,14 @@
 
             <div class="topbar-divider d-none d-sm-block"></div>
 
+
+            
+            <!-- Nav Item - Logout -->
+            <li class="nav-item">
+              <a class="nav-link" href="<?= base_url('auth/logout'); ?>" data-toggle="modal" data-target="#logoutModal">
+                <i class="fas fa-fw nav-icon fa-sign-out-alt"></i>
+                <span>Logout</span></a>
+
             <!-- Nav Item - User Information -->
             <li class="nav-item dropdown no-arrow">
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -187,6 +208,7 @@
                   Logout
                 </a>
               </div>
+
             </li>
 
           </ul>
