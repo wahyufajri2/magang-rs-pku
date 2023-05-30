@@ -57,34 +57,103 @@
         <hr class="sidebar-divider mt-3">
 
         <!-- Sidebar Menu -->
+
+        
         <nav class="mt-2">
           <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-
-            <li class="nav-item">
+          <li class="nav-item">
               <a href="<?= base_url('index.php/dashboard') ?>" class="nav-link active">
                 <i class="fas fa-fw nav-icon fa-tachometer-alt"></i>
                 <p>Dashboard</p>
               </a>
             </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-chart-pie"></i>
+              <p>
+                Rekam Medis
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="<?= base_url('index.php/pasien') ?>" class="nav-link">
+              <a href="<?= base_url('index.php/pasien') ?>" class="nav-link" >
                 <i class="fas fa-fw nav-icon fa-users"></i>
-                <p>Pasien</p>
+                <p>Master Data Pasien</p>
               </a>
             </li>
-            <!-- <li class="nav-item">
-              <a href="<?= base_url('index.php/kunjungan') ?>" class="nav-link">
-                <i class="fas fa-fw nav-icon fa-user-md"></i>
-                <p>Kunjungan</p>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-chart-pie"></i>
+              <p>
+                Pendaftaran
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+            <li class="nav-item">
+              <a href="<?= base_url('index.php/pasien') ?>" class="nav-link" >
+                <i class="fas fa-fw nav-icon fa-users"></i>
+                <p>Master Data Pasien</p>
               </a>
-            </li> -->
+            </li>
+            <li class="nav-item">
+              <a href="<?= base_url('index.php/pendaftaran') ?>" class="nav-link" >
+                <i class="fas fa-fw nav-icon fa-users"></i>
+                <p>Entri Kunjungan</p>
+              </a>
+            </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-chart-pie"></i>
+              <p>
+                Perawat
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+            <li class="nav-item">
+              <a href="<?= base_url('') ?>" class="nav-link" >
+                <i class="fas fa-fw nav-icon fa-users"></i>
+                <p>Transfusi Darah</p>
+              </a>
+            </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-chart-pie"></i>
+              <p>
+                Bidan
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+            <li class="nav-item">
+              <a href="<?= base_url('') ?>" class="nav-link" >
+                <i class="fas fa-fw nav-icon fa-users"></i>
+                <p>Assesmen Kebidanan</p>
+              </a>
+            </li>
             <li class="nav-item">
               <a href="<?= base_url('index.php/catatanpersalinan') ?>" class="nav-link">
                 <i class="fas nav-icon fa-fw fa-crutch"></i>
                 <p>Catatan Persalinan</p>
               </a>
             </li>
-
+            </ul>
+          </li>
+            <!-- <li class="nav-item">
+              <a href="<?= base_url('index.php/kunjungan') ?>" class="nav-link">
+                <i class="fas fa-fw nav-icon fa-user-md"></i>
+                <p>Kunjungan</p>
+              </a>
+            </li> -->
+ <!-- #region -->
             <!-- Divider -->
             <hr class="sidebar-divider mt-3">
 
