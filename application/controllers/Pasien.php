@@ -48,6 +48,7 @@ class Pasien extends CI_Controller
 				'no_rm' => $this->input->post('no_rm'),
 				'nama_pasien' => $this->input->post('nama_pasien'),
 				'tgl_lahir' => $this->input->post('tgl_lahir'),
+				'alamat' => $this->input->post('alamat'),
 			);
 		//}
 		$this->pasien_model->insert_data($data, 'tb_pasien');

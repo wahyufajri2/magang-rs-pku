@@ -8,6 +8,7 @@
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
   <link rel="stylesheet" href="<?= base_url('asset/template') ?>/plugins/fontawesome-free/css/all.min.css">
@@ -20,5 +21,6 @@
   <link rel="stylesheet" href="<?= base_url('asset/template') ?>/font-awesome/css/font-awesome.min.css" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css">
+  <link rel="shortcut icon" href="https://assets.onlinelabels.com/images/clip-art/baabullah/baabullah_logo_rumahsakit_muhammadiyah0.png">
 
 </head>
